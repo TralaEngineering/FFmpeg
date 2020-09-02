@@ -59,7 +59,7 @@ cd ${BASE_DIR}
   echo "Strip command ${STRIP_COMMAND}"
 
 
-  $BASE_DIR/configure --prefix=$BUILD_DIR/${ABI} --bindir=$BUILD_DIR/$ABI/bin --target-os=android --arch=${ARCH} --enable-cross-compile --cc=${TOOLCHAIN_PATH}/${TOOLCHAIN_PREFIX}${PLATFORM_VERSION}-clang --strip=${TOOLCHAIN_PATH}/${STRIP_COMMAND} --disable-programs --disable-doc --enable-shared --disable-static --extra-cflags="-O3 -fPIC" ${EXTRA_CONFIG} --disable-everything --enable-encoder=aac --enable-muxer=mp4 --enable-protocol=file
+  $BASE_DIR/configure --prefix=$BUILD_DIR/${ABI} --bindir=$BUILD_DIR/$ABI/bin --target-os=android --arch=${ARCH} --enable-cross-compile --cc=${TOOLCHAIN_PATH}/${TOOLCHAIN_PREFIX}${PLATFORM_VERSION}-clang --strip=${TOOLCHAIN_PATH}/${STRIP_COMMAND} --disable-programs --disable-doc --enable-shared --disable-static --extra-cflags="-O3 -fPIC" ${EXTRA_CONFIG} --disable-everything --enable-encoder=aac --enable-muxer=mp4,ipod --enable-protocol=file
   # The path where the resulting libraries and headers will be installed after `make install` is run. The resulting directory structure is "build/{armeabi-v7a,arm64-v8a,x86,x86_64}/{include, lib}".
 #--prefix=$BUILD_DIR \
   # Target operating system name.
